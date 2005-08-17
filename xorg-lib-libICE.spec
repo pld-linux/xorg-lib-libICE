@@ -16,6 +16,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-lib-xtrans-devel
+Obsoletes:	libICE
 BuildRoot:	%{tmpdir}/libICE-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -33,6 +34,7 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki libICE
 Group:		X11/Development/Libraries
 Requires:	xorg-lib-libICE = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
+Obsoletes:	libICE-devel
 
 %description devel
 Inter Client Exchange library.
@@ -52,6 +54,7 @@ Summary:	Static libICE libraries
 Summary(pl):	Biblioteki statyczne libICE
 Group:		Development/Libraries
 Requires:	xorg-lib-libICE-devel = %{version}-%{release}
+Obsoletes:	libICE-static
 
 %description static
 Inter Client Exchange library.
