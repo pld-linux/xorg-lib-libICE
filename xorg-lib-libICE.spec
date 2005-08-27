@@ -17,8 +17,6 @@ BuildRequires:	xorg-util-util-macros
 Obsoletes:	libICE
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-
 %description
 Inter Client Exchange library.
 
