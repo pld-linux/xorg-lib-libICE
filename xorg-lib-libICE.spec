@@ -1,5 +1,3 @@
-
-#
 Summary:	Inter Client Exchange library
 Summary(pl):	Biblioteka wymiany miêdzy klientami
 Name:		xorg-lib-libICE
@@ -14,10 +12,10 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
-BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-lib-xtrans-devel
+BuildRequires:	xorg-util-util-macros
 Obsoletes:	libICE
-BuildRoot:	%{tmpdir}/libICE-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 
@@ -27,12 +25,11 @@ Inter Client Exchange library.
 %description -l pl
 Biblioteka wymiany miêdzy klientami.
 
-
 %package devel
 Summary:	Header files libICE development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libICE
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libICE = %{version}-%{release}
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
 Obsoletes:	libICE-devel
 
@@ -48,12 +45,11 @@ Biblioteka wymiany miêdzy klientami.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libICE.
 
-
 %package static
-Summary:	Static libICE libraries
-Summary(pl):	Biblioteki statyczne libICE
-Group:		Development/Libraries
-Requires:	xorg-lib-libICE-devel = %{version}-%{release}
+Summary:	Static libICE library
+Summary(pl):	Biblioteka statyczna libICE
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libICE-static
 
 %description static
@@ -65,7 +61,6 @@ This package contains the static libICE library.
 Biblioteka wymiany miêdzy klientami.
 
 Pakiet zawiera statyczn± bibliotekê libICE.
-
 
 %prep
 %setup -q -n libICE-%{version}
@@ -92,20 +87,17 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog
-%attr(755,root,wheel) %{_libdir}/libICE.so.*
-
+%attr(755,root,root) %{_libdir}/libICE.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/ICE/*.h
+%attr(755,root,root) %{_libdir}/libICE.so
 %{_libdir}/libICE.la
-%attr(755,root,wheel) %{_libdir}/libICE.so
+%{_includedir}/X11/ICE/*.h
 %{_pkgconfigdir}/ice.pc
-
 
 %files static
 %defattr(644,root,root,755)
