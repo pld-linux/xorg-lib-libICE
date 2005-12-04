@@ -24,8 +24,8 @@ Inter Client Exchange library.
 Biblioteka wymiany miêdzy klientami.
 
 %package devel
-Summary:	Header files libICE development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libICE
+Summary:	Header files for libICE library
+Summary(pl):	Pliki nag³ówkowe biblioteki libICE
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -35,7 +35,7 @@ Obsoletes:	libICE-devel
 Inter Client Exchange library.
 
 This package contains the header files needed to develop programs that
-use these libICE.
+use libICE.
 
 %description devel -l pl
 Biblioteka wymiany miêdzy klientami.
