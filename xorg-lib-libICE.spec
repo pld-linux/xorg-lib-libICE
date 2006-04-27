@@ -1,12 +1,12 @@
 Summary:	Inter Client Exchange library
 Summary(pl):	Biblioteka wymiany miêdzy klientami
 Name:		xorg-lib-libICE
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libICE-%{version}.tar.bz2
-# Source0-md5:	b9c5ec4b4f5fd351f7f4a50e15248b02
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/libICE-%{version}.tar.bz2
+# Source0-md5:	34cc902e97eb52d0f99874d7f0e2796e
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
