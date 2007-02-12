@@ -1,5 +1,5 @@
 Summary:	Inter Client Exchange library
-Summary(pl.UTF-8):   Biblioteka wymiany między klientami
+Summary(pl.UTF-8):	Biblioteka wymiany między klientami
 Name:		xorg-lib-libICE
 Version:	1.0.3
 Release:	1
@@ -25,7 +25,7 @@ Biblioteka wymiany między klientami.
 
 %package devel
 Summary:	Header files for libICE library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libICE
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libICE
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -45,7 +45,7 @@ używających biblioteki libICE.
 
 %package static
 Summary:	Static libICE library
-Summary(pl.UTF-8):   Biblioteka statyczna libICE
+Summary(pl.UTF-8):	Biblioteka statyczna libICE
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libICE-static
