@@ -1,5 +1,5 @@
 Summary:	Inter Client Exchange library
-Summary(pl):	Biblioteka wymiany miêdzy klientami
+Summary(pl.UTF-8):   Biblioteka wymiany miÄ™dzy klientami
 Name:		xorg-lib-libICE
 Version:	1.0.3
 Release:	1
@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Inter Client Exchange library.
 
-%description -l pl
-Biblioteka wymiany miêdzy klientami.
+%description -l pl.UTF-8
+Biblioteka wymiany miÄ™dzy klientami.
 
 %package devel
 Summary:	Header files for libICE library
-Summary(pl):	Pliki nag³ówkowe biblioteki libICE
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libICE
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-proto-xproto-devel
@@ -37,15 +37,15 @@ Inter Client Exchange library.
 This package contains the header files needed to develop programs that
 use libICE.
 
-%description devel -l pl
-Biblioteka wymiany miêdzy klientami.
+%description devel -l pl.UTF-8
+Biblioteka wymiany miÄ™dzy klientami.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libICE.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libICE.
 
 %package static
 Summary:	Static libICE library
-Summary(pl):	Biblioteka statyczna libICE
+Summary(pl.UTF-8):   Biblioteka statyczna libICE
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libICE-static
@@ -55,10 +55,10 @@ Inter Client Exchange library.
 
 This package contains the static libICE library.
 
-%description static -l pl
-Biblioteka wymiany miêdzy klientami.
+%description static -l pl.UTF-8
+Biblioteka wymiany miÄ™dzy klientami.
 
-Pakiet zawiera statyczn± bibliotekê libICE.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libICE.
 
 %prep
 %setup -q -n libICE-%{version}
