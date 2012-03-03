@@ -1,22 +1,22 @@
 Summary:	Inter Client Exchange library
 Summary(pl.UTF-8):	Biblioteka wymiany między klientami
 Name:		xorg-lib-libICE
-Version:	1.0.7
+Version:	1.0.8
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libICE-%{version}.tar.bz2
-# Source0-md5:	bb72a732b15e9dc25c3036559387eed5
+# Source0-md5:	471b5ca9f5562ac0d6eac7a0bf650738
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xmlto >= 0.0.20
+BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-sgml-doctools >= 1.5
-BuildRequires:	xorg-util-util-macros >= 1.10
+BuildRequires:	xorg-sgml-doctools >= 1.8
+BuildRequires:	xorg-util-util-macros >= 1.12
 Obsoletes:	libICE
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -96,7 +96,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/{ICElib.html,xorg.css}
+%doc doc/ICElib.html specs/ice.html
 %attr(755,root,root) %{_libdir}/libICE.so
 %{_libdir}/libICE.la
 %dir %{_includedir}/X11/ICE
