@@ -1,12 +1,12 @@
 Summary:	Inter Client Exchange library
 Summary(pl.UTF-8):	Biblioteka wymiany między klientami
 Name:		xorg-lib-libICE
-Version:	1.0.10
+Version:	1.1.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libICE-%{version}.tar.bz2
-# Source0-md5:	76d77499ee7120a56566891ca2c0dbcf
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libICE-%{version}.tar.xz
+# Source0-md5:	b444a0e4c2163d1bbc7b046c3653eb8d
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -14,12 +14,14 @@ BuildRequires:	docbook-dtd412-xml
 BuildRequires:	libbsd-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.25
 BuildRequires:	xorg-sgml-doctools >= 1.8
 BuildRequires:	xorg-util-util-macros >= 1.12
-Obsoletes:	libICE
+BuildRequires:	xz
+Obsoletes:	libICE < 6.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +37,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libbsd-devel
 Requires:	xorg-proto-xproto-devel
-Obsoletes:	libICE-devel
+Obsoletes:	libICE-devel < 6.4
 
 %description devel
 Inter Client Exchange library.
@@ -54,7 +56,7 @@ Summary:	Static libICE library
 Summary(pl.UTF-8):	Biblioteka statyczna libICE
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libICE-static
+Obsoletes:	libICE-static < 6.4
 
 %description static
 Inter Client Exchange library.
